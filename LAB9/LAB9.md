@@ -88,16 +88,31 @@ To reduce costs effectively, ShopPro International should consider the following
 
 ### **6. Future Growth and Budget Plan**
 
-To anticipate future expenses and plan strategically for growth, a three-year cost projection should be developed. Below are the projected expenses and strategic adjustments based on anticipated growth:
+To ensure effective financial planning and resource allocation for ShopPro International, a detailed three-year cost projection has been developed. This projection accounts for anticipated growth in user demand, operational needs, and strategic initiatives to optimize costs. The table below outlines projected expenses, estimated monthly costs for both Pay-As-You-Go and Prepaid models, along with strategic adjustments to accommodate growth.
 
-| **Year** | **Projected Growth (%)** | **Estimated Monthly Cost (Pay-As-You-Go)** | **Estimated Monthly Cost (Prepaid)** | **Strategic Adjustments**                               
+| Year  | Projected Growth (%) | Estimated Monthly Cost (Pay-As-You-Go) | Estimated Monthly Cost (Prepaid) | Strategic Adjustments                                              |
+|-------|-----------------------|-----------------------------------------|-----------------------------------|------------------------------------------------------------------|
+| Year 1 | 10%                   | $34,300                                | $21,400                           | - Implement auto-scaling features to optimize resource usage.<br> - Engage cost optimization tools for continuous monitoring and analysis of spending patterns. |
+| Year 2 | 15%                   | $39,400                                | $24,500                           | - Increase the number of reserved instances for critical applications to take advantage of lower rates.<br> - Enhance monitoring capabilities to track resource utilization and optimize performance. |
+| Year 3 | 20%                   | $47,300                                | $29,000                           | - Reevaluate resource allocation based on usage data to identify underutilized resources and adjust accordingly.<br> - Adopt serverless architectures where feasible to reduce costs associated with provisioning and managing server infrastructure. |
 
- |
-|----------|---------------------------|---------------------------------------------|--------------------------------------|---------------------------------------------------------|
-| Year 1   | 10%                       | $34,300                                    | $21,400                             | Implement auto-scaling; engage cost optimization tools   |
-| Year 2   | 15%                       | $39,400                                    | $24,500                             | Increase reserved instances; enhance monitoring capabilities |
-| Year 3   | 20%                       | $47,300                                    | $29,000                             | Reevaluate resource allocation; adopt serverless architectures |
+### **Explanation of Strategic Adjustments**
 
+1. **Year 1 Adjustments**:
+   - **Implement Auto-Scaling**: This feature automatically adjusts the number of running instances based on real-time demand, helping to ensure that resources are only utilized when necessary, thus optimizing costs.
+   - **Engage Cost Optimization Tools**: Utilizing Azure’s built-in tools for cost analysis and management will help identify spending trends and areas for potential savings, allowing for informed decision-making.
+
+2. **Year 2 Adjustments**:
+   - **Increase Reserved Instances**: By committing to reserved instances for key workloads, ShopPro can secure lower pricing and ensure availability during peak demand periods, ultimately reducing monthly costs.
+   - **Enhance Monitoring Capabilities**: Implementing advanced monitoring tools will provide deeper insights into application performance and resource utilization, enabling proactive adjustments to avoid overspending.
+
+3. **Year 3 Adjustments**:
+   - **Reevaluate Resource Allocation**: Regular reviews of resource allocation based on actual usage will allow ShopPro to identify inefficiencies and optimize their infrastructure to reduce costs.
+   - **Adopt Serverless Architectures**: Transitioning to serverless solutions, where applications run without the need for dedicated servers, can lead to significant cost savings and allow for more agile and scalable application deployment.
+
+### **Conclusion**
+
+The Future Growth and Budget Plan outlined above provides a strategic framework for managing costs and optimizing resource allocation as ShopPro International expands its operations. By anticipating growth and implementing targeted adjustments over the next three years, the company can ensure sustainable financial health while maximizing the benefits of its cloud migration to Azure. This proactive approach positions ShopPro for success in a dynamic and competitive eCommerce landscape.
 
 
 ### **7. Conclusion**
