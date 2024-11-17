@@ -68,8 +68,8 @@ Once the Windows Server OS was installed,deployed a simple "Hello World" web app
 **Expected Outcome:**  
 The "Hello World" web page should be accessible via the internal network of the VM.
 
-![Azure Migrate Installation in On-Prem VM](images/3-azure-migrate-installation-on-prem-vm.png)  
-*Azure Migrate Installation in the On-Prem VM*
+![Hello worlds](images/index.png)  
+*Hello World inside the localhost sever*
 
 ---
 
@@ -87,7 +87,10 @@ Azure Migrate was used to assess the readiness of the VM for migration to Azure.
 **Expected Outcome:**  
 A migration readiness assessment report that provides compatibility results, highlighting any issues that might require attention before migration.
 
-![Connectivity to Azure](images/4-connectivity-to-azure.png)  
+![Azure Migrate Installed in On-Prem VM](images/3.png)  
+*Azure Migrate Installation in the On-Prem VM*
+
+![Connectivity to Azure](images/4.png)  
 *Connectivity to Azure for Migration Assessment*
 
 ### Task: Discovery of Sources
@@ -95,14 +98,35 @@ A migration readiness assessment report that provides compatibility results, hig
 The next step was to discover the on-prem VM that would be migrated to Azure.
 
 **Steps:**
-1. In Azure Migrate, configure the discovery of the on-prem VMs by linking your VMware environment.
+1. In Azure Migrate, configure the discovery of the on-prem VMs by linking the VMware environment.
 2. Run the discovery process to identify the VMs available for migration.
 
 **Expected Outcome:**  
 A list of discovered VMs that are ready for migration to Azure.
 
-![Discovery Sources](images/5-discovery-sources.png)  
+![Credentials of Sources](images/5.png)  
+*Adding credentials of Sources such as IP address, username, friendly name*
+
+![Discovery Sources](images/6.png)  
 *Discovery Sources for Migration Process*
+
+![Assessment Sources](images/6.1.png)  
+*Assessment done on Discovered Sources for Migration Process*
+
+### Task: Installing Replication appliance
+
+1. VM2(Site Replicantion VM) the migration tools The replication appliance (Configuration Server) is installed using azure migrate
+
+2. Installing prerequisite such us mysql server, network selection, IIS
+
+![Replication appliance](images/7.png)  
+*Download replication appliance and register key*
+
+![Pre requisite to run configuration server](images/8.png)  
+*All Pre requisite installed to run configuration server*
+
+![Finish installation](images/9.png)  
+*Complete installation of replication appliance*
 
 ---
 
@@ -113,15 +137,18 @@ A list of discovered VMs that are ready for migration to Azure.
 The next phase of the lab involved replicating the on-prem VM to Azure using Azure Site Recovery (ASR). This ensures that the VM can be migrated safely to Azure.
 
 **Steps:**
-1. Install the Azure Site Recovery (ASR) agent on the on-prem VM.
-2. Set up replication to start the process of copying the VM data to Azure.
-3. Configure replication settings, including network and storage settings for the VM in Azure.
+1. Install the Azure Site Recovery Unified Agent(ASR) agent / Mobility agent on the on-prem VM.
+2. Provide configuration server Ip and passphrase.
 
-**Expected Outcome:**  
-The VM will begin replicating to Azure, with the settings configured for migration.
 
-![Download Application in Replication VM](images/7-download-application-in-replication-vm.png)  
+![Download Application in Replication VM](images/11.png)  
 *Download and Install Application in the Replication VM*
+
+![Download Application in Replication VM](images/12.png)  
+*Seleting and start Replication VM*
+
+![Download Application in Replication VM](images/13.png)  
+*Settings to choose for Replication*
 
 ### Task: Execute Initial Migration Phase
 
@@ -134,8 +161,21 @@ With replication complete, the initial migration phase was started.
 **Expected Outcome:**  
 The VM is successfully migrated to Azure, with all necessary settings applied.
 
-![Initial Migration Phase](images/16-initial-migrations-phase.png)  
+![Initial Migration Phase](images/16.png)  
 *Initial Migration Phase from On-Prem to Azure*
+
+![Initial Migration Phase](images/17.png)  
+*Health status of migration vm*
+
+![Initial Migration Phase](images/20.png)  
+*Test migration of vm*
+
+![Initial Migration Phase](images/18.png)  
+*Clean up of Test migration*
+
+
+![Initial Migration Phase](images/19.png)  
+*Migrated VM inside resource group*
 
 ---
 
@@ -153,8 +193,11 @@ Once the migration was complete, we needed to verify that the VM and the "Hello 
 **Expected Outcome:**  
 The migrated VM should function properly, and the application should remain accessible after failover.
 
-![Migrated VM](images/19-migrated-vm.png)  
-*Migrated VM on Azure Post-Migration*
+![Migrated VM](images/21.png)  
+*Creating an NSG group for inbound and outbound rules*
+
+![Migrated VM](images/22.png)  
+*Creating public for RDP connection*
 
 ---
 
@@ -171,24 +214,5 @@ The entire process demonstrated the importance of thorough testing, both before 
 
 ---
 
-## Deliverables
 
-### Assessment Report
 
-A detailed summary of the Azure Migrate assessment, including any compatibility issues and recommended fixes.
-
-### Migration Outcome
-
-A log of the migration process, including any errors encountered and their resolutions.
-
-### Validation Results
-
-Screenshots or a video demonstrating the "Hello World" application functioning in Azure post-migration.
-
-### Reflection
-
-A brief analysis of the migration process, challenges faced, and lessons learned.
-
----
-
-This README serves as the complete report for the VMware to Azure migration lab. All images referenced in this report can be found in the `images/` folder. Each image is numbered and described to ensure clarity. The process was completed step-by-step, ensuring a smooth and successful migration from VMware Workstation to Azure.
