@@ -202,6 +202,13 @@ The migrated VM should function properly, and the application should remain acce
 ![Migrated VM](images/22.png)  
 *Creating public for RDP connection*
 
+
+![RDP and SSH Port on NSG](images/24.png)  
+*RDP connection to migrated VM*
+
+![RDP and SSH Port on NSG](images/25.png)  
+*Migrated VM with hello world server*
+
 ---
 
 ## Conclusion and Reflection
@@ -212,8 +219,7 @@ The migration process was relatively smooth, but there were challenges such as e
 
 The entire process demonstrated the importance of thorough testing, both before and after migration, to ensure minimal downtime and ensure business continuity.
 
-![RDP and SSH Port on NSG](images/20-rdp-ssh-port-on-nsg.png)  
-*RDP and SSH Port Configurations on NSG*
+
 
 ---
 
