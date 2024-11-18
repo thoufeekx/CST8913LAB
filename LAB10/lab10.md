@@ -193,6 +193,9 @@ Once the migration was complete, we needed to verify that the VM and the "Hello 
 **Expected Outcome:**  
 The migrated VM should function properly, and the application should remain accessible after failover.
 
+![Migrated VM](images/23.png)  
+*Failover testing completed for replicated vm*
+
 ![Migrated VM](images/21.png)  
 *Creating an NSG group for inbound and outbound rules*
 
