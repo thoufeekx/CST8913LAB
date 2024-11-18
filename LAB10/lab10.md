@@ -91,7 +91,7 @@ A migration readiness assessment report that provides compatibility results, hig
 *Azure Migrate Installation in the On-Prem VM*
 
 ![Connectivity to Azure](images/4.png)  
-*Connectivity to Azure for Migration Assessment*
+*Connectivity to Azure for Migration Assessment tool*
 
 ### Task: Discovery of Sources
 
@@ -208,6 +208,42 @@ The migrated VM should function properly, and the application should remain acce
 
 ![RDP and SSH Port on NSG](images/25.png)  
 *Migrated VM with hello world server*
+
+### Fail over testing
+
+
+### **Complete Migration**  
+The first step in the failover testing process is to complete the migration of the VM. By selecting **Complete Migration** in the **Recovery Services Vault**, you finalize the process, ensuring that the VM is fully migrated and prepared for disaster recovery testing.
+
+![complete migration](images/26.png)  
+*Completed migration for failover testing*
+
+### **Failover Settings Choose**  
+Once migration is complete, configure the failover settings. This involves selecting a recovery point, such as **Latest Processed** or **Application Consistent**, and choosing a test network to simulate the failover scenario without affecting the production environment.
+
+![complete migration](images/27.png)  
+*Failover settings page*
+
+
+### **Complete Failover**  
+After configuring the failover settings, initiate the **Complete Failover** process. This step transitions the VM to the recovery environment, testing whether it can successfully switch to the secondary site under disaster recovery conditions.
+
+![complete failover](images/28.png)  
+*Failover settings page*
+
+### **Failover Test VM**  
+Following the complete failover, perform a **Test Failover**. This step spins up the VM in the test environment to verify that the failover process works as expected and the system is functional in the new environment.
+
+![complete failover](images/29.png)  
+*Failover test vm inisde resource group*
+
+
+### **Hello World in Failover Testing**  
+Finally, "Hello World" application on the VM during the test. This verifies that the failover VM is operational and all configurations are correct, ensuring the environment is ready for real disaster recovery scenarios.
+
+![complete failover](images/30.png)  
+*Hello world in failover test vm*
+
 
 ---
 
